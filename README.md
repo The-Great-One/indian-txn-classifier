@@ -28,7 +28,14 @@ The classifier supports 30+ categories:
 
 1,700 privacy-sanitized transaction descriptions with category labels. PII (phone numbers, personal UPI handles, reference numbers) has been redacted.
 
-## Usage
+## Run on Hugging Face Spaces
+
+Try the model in your browser without any setup:
+[🤗 Spaces Demo](https://huggingface.co/spaces/SahilGoel/indian-txn-classifier-demo)
+
+Paste any UPI/NEFT/IMPS/RTGS transaction description and get the category, company, income flag, and confidence score.
+
+## Usage (Local)
 
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -49,10 +56,11 @@ print(result)
 
 ## Files
 
+- `app.py` — Gradio app for Hugging Face Spaces (run in browser)
+- `requirements.txt` — Python deps for the Space
 - `code/` — Classifier pipeline (bank parser, rule engine, LLM classifier, merchant DB)
-- `training_data.json` — 1,700 sanitized training examples
-- `model.safetensors` — Fine-tuned model weights
-- `lora-adapter/` — LoRA adapter checkpoints
+- `model.safetensors` — Fine-tuned model weights (on Hugging Face Hub)
+- `lora-adapter/` — LoRA adapter checkpoints (on Hugging Face Hub)
 
 ## Supported Banks
 
