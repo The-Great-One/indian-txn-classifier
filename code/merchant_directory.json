@@ -1,0 +1,790 @@
+{
+  "version": "1.0",
+  "categories": [
+    "salary",
+    "dividend",
+    "interest",
+    "rental",
+    "capital_gains",
+    "other_income",
+    "food",
+    "grocery",
+    "shopping",
+    "bills",
+    "medical",
+    "insurance",
+    "tax_payment",
+    "credit_card",
+    "personal_transfer",
+    "investment",
+    "trading_deposit",
+    "trading_credit",
+    "education",
+    "travel",
+    "entertainment",
+    "donation",
+    "loan_emi",
+    "loan_repayment",
+    "cash_withdrawal",
+    "unclassified",
+    "friends",
+    "family",
+    "flat_deposit",
+    "trading_fees",
+    "vehicle_purchase",
+    "staff_salary",
+    "unclassified_credit",
+    "health_fitness",
+    "transfer"
+  ],
+  "curated_transaction_markers": {
+    "gpaytoll@icici": {
+      "display_name": "Google Pay FASTag",
+      "category": "travel",
+      "is_income": false,
+      "confidence": 0.98
+    },
+    "blusmartmobilit": {
+      "display_name": "BluSmart",
+      "category": "travel",
+      "is_income": false,
+      "confidence": 0.98
+    },
+    "1mg.payu@axisba": {
+      "display_name": "Tata 1mg",
+      "category": "medical",
+      "is_income": false,
+      "confidence": 0.98
+    },
+    "artemis ho": {
+      "display_name": "Artemis Hospital",
+      "category": "medical",
+      "is_income": false,
+      "confidence": 0.98
+    },
+    "artemishospita": {
+      "display_name": "Artemis Hospital",
+      "category": "medical",
+      "is_income": false,
+      "confidence": 0.98
+    },
+    "the chemis": {
+      "display_name": "The Chemist",
+      "category": "medical",
+      "is_income": false,
+      "confidence": 0.95
+    },
+    "the chemist": {
+      "display_name": "The Chemist",
+      "category": "medical",
+      "is_income": false,
+      "confidence": 0.95
+    },
+    "zomatoindia@ic": {
+      "display_name": "Zomato",
+      "category": "food",
+      "is_income": false,
+      "confidence": 0.98
+    },
+    "mgf mall m": {
+      "display_name": "MGF Mall Parking",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.95
+    },
+    "med point": {
+      "display_name": "Med Point",
+      "category": "medical",
+      "is_income": false,
+      "confidence": 0.95
+    }
+  },
+  "handle_category_map": {
+    "zomato": {
+      "display_name": "Zomato",
+      "category": "food",
+      "is_income": false,
+      "confidence": 0.95
+    },
+    "swiggy": {
+      "display_name": "Swiggy",
+      "category": "food",
+      "is_income": false,
+      "confidence": 0.95
+    },
+    "blinkit": {
+      "display_name": "Blinkit",
+      "category": "grocery",
+      "is_income": false,
+      "confidence": 0.95
+    },
+    "zepto": {
+      "display_name": "Zepto",
+      "category": "grocery",
+      "is_income": false,
+      "confidence": 0.95
+    },
+    "bigbasket": {
+      "display_name": "BigBasket",
+      "category": "grocery",
+      "is_income": false,
+      "confidence": 0.95
+    },
+    "dominos": {
+      "display_name": "Dominos",
+      "category": "food",
+      "is_income": false,
+      "confidence": 0.92
+    },
+    "pizzahut": {
+      "display_name": "Pizza Hut",
+      "category": "food",
+      "is_income": false,
+      "confidence": 0.92
+    },
+    "kfc": {
+      "display_name": "KFC",
+      "category": "food",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "mcdonald": {
+      "display_name": "McDonald's",
+      "category": "food",
+      "is_income": false,
+      "confidence": 0.92
+    },
+    "eatfit": {
+      "display_name": "EatFit",
+      "category": "food",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "box8": {
+      "display_name": "Box8",
+      "category": "food",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "amazon": {
+      "display_name": "Amazon",
+      "category": "shopping",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "flipkart": {
+      "display_name": "Flipkart",
+      "category": "shopping",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "myntra": {
+      "display_name": "Myntra",
+      "category": "shopping",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "ajio": {
+      "display_name": "AJIO",
+      "category": "shopping",
+      "is_income": false,
+      "confidence": 0.88
+    },
+    "meesho": {
+      "display_name": "Meesho",
+      "category": "shopping",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "nykaa": {
+      "display_name": "Nykaa",
+      "category": "shopping",
+      "is_income": false,
+      "confidence": 0.88
+    },
+    "tatacliq": {
+      "display_name": "Tata CLiQ",
+      "category": "shopping",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "jiomart": {
+      "display_name": "JioMart",
+      "category": "grocery",
+      "is_income": false,
+      "confidence": 0.88
+    },
+    "bigbazaar": {
+      "display_name": "Big Bazaar",
+      "category": "grocery",
+      "is_income": false,
+      "confidence": 0.82
+    },
+    "uber": {
+      "display_name": "Uber",
+      "category": "travel",
+      "is_income": false,
+      "confidence": 0.95
+    },
+    "ola": {
+      "display_name": "Ola",
+      "category": "travel",
+      "is_income": false,
+      "confidence": 0.95
+    },
+    "blusmart": {
+      "display_name": "BluSmart",
+      "category": "travel",
+      "is_income": false,
+      "confidence": 0.92
+    },
+    "rapido": {
+      "display_name": "Rapido",
+      "category": "travel",
+      "is_income": false,
+      "confidence": 0.92
+    },
+    "irctc": {
+      "display_name": "IRCTC",
+      "category": "travel",
+      "is_income": false,
+      "confidence": 0.95
+    },
+    "makemytrip": {
+      "display_name": "MakeMyTrip",
+      "category": "travel",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "redbus": {
+      "display_name": "RedBus",
+      "category": "travel",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "goibibo": {
+      "display_name": "Goibibo",
+      "category": "travel",
+      "is_income": false,
+      "confidence": 0.88
+    },
+    "indigo": {
+      "display_name": "Indigo Airlines",
+      "category": "travel",
+      "is_income": false,
+      "confidence": 0.92
+    },
+    "airindia": {
+      "display_name": "Air India",
+      "category": "travel",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "netflix": {
+      "display_name": "Netflix",
+      "category": "entertainment",
+      "is_income": false,
+      "confidence": 0.95
+    },
+    "spotify": {
+      "display_name": "Spotify",
+      "category": "entertainment",
+      "is_income": false,
+      "confidence": 0.95
+    },
+    "hotstar": {
+      "display_name": "Disney+ Hotstar",
+      "category": "entertainment",
+      "is_income": false,
+      "confidence": 0.92
+    },
+    "prime": {
+      "display_name": "Amazon Prime",
+      "category": "entertainment",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "youtube": {
+      "display_name": "YouTube",
+      "category": "entertainment",
+      "is_income": false,
+      "confidence": 0.95
+    },
+    "playstore": {
+      "display_name": "Google Play Store",
+      "category": "entertainment",
+      "is_income": false,
+      "confidence": 0.92
+    },
+    "sonyliv": {
+      "display_name": "SonyLIV",
+      "category": "entertainment",
+      "is_income": false,
+      "confidence": 0.88
+    },
+    "jiosaavn": {
+      "display_name": "JioSaavn",
+      "category": "entertainment",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "gpay-utility": {
+      "display_name": "Google Pay Utility",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.8
+    },
+    "mygate": {
+      "display_name": "MyGate",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "paytm-mygate": {
+      "display_name": "MyGate Society",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "electricity": {
+      "display_name": "Electricity Bill",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.82
+    },
+    "water": {
+      "display_name": "Water Bill",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.8
+    },
+    "gas": {
+      "display_name": "Gas Bill",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.8
+    },
+    "broadband": {
+      "display_name": "Broadband Bill",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.82
+    },
+    "airtel": {
+      "display_name": "Airtel",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "jio": {
+      "display_name": "Jio",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.82
+    },
+    "vodafone": {
+      "display_name": "Vodafone Idea",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.8
+    },
+    "bsnl": {
+      "display_name": "BSNL",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.8
+    },
+    "nivabupa": {
+      "display_name": "Niva Bupa Insurance",
+      "category": "insurance",
+      "is_income": false,
+      "confidence": 0.92
+    },
+    "hdfclife": {
+      "display_name": "HDFC Life",
+      "category": "insurance",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "iciciprulife": {
+      "display_name": "ICICI Prudential Life",
+      "category": "insurance",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "lic": {
+      "display_name": "LIC",
+      "category": "insurance",
+      "is_income": false,
+      "confidence": 0.88
+    },
+    "starhealth": {
+      "display_name": "Star Health",
+      "category": "insurance",
+      "is_income": false,
+      "confidence": 0.88
+    },
+    "zerodha": {
+      "display_name": "Zerodha",
+      "category": "trading_deposit",
+      "is_income": false,
+      "confidence": 0.98
+    },
+    "groww": {
+      "display_name": "Groww",
+      "category": "trading_deposit",
+      "is_income": false,
+      "confidence": 0.92
+    },
+    "indmoney": {
+      "display_name": "INDmoney",
+      "category": "investment",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "upstox": {
+      "display_name": "Upstox",
+      "category": "trading_deposit",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "angelone": {
+      "display_name": "Angel One",
+      "category": "trading_deposit",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "5paisa": {
+      "display_name": "5paisa",
+      "category": "trading_deposit",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "cred.club": {
+      "display_name": "CRED",
+      "category": "credit_card",
+      "is_income": false,
+      "confidence": 0.95
+    },
+    "cred": {
+      "display_name": "CRED",
+      "category": "credit_card",
+      "is_income": false,
+      "confidence": 0.95
+    },
+    "paytm-jiomobili": {
+      "display_name": "CRED Bill Pay",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.82
+    },
+    "payzomato@hdfcb": {
+      "display_name": "CRED Bill Pay",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.75
+    },
+    "paytm-credit": {
+      "display_name": "Paytm Credit Card",
+      "category": "credit_card",
+      "is_income": false,
+      "confidence": 0.88
+    },
+    "pharmeasy": {
+      "display_name": "PharmEasy",
+      "category": "medical",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "tata1mg": {
+      "display_name": "Tata 1mg",
+      "category": "medical",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "1mg": {
+      "display_name": "Tata 1mg",
+      "category": "medical",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "apollo": {
+      "display_name": "Apollo Pharmacy",
+      "category": "medical",
+      "is_income": false,
+      "confidence": 0.82
+    },
+    "netmeds": {
+      "display_name": "Netmeds",
+      "category": "medical",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "artemis": {
+      "display_name": "Artemis Hospital",
+      "category": "medical",
+      "is_income": false,
+      "confidence": 0.88
+    },
+    "udemy": {
+      "display_name": "Udemy",
+      "category": "education",
+      "is_income": false,
+      "confidence": 0.92
+    },
+    "coursera": {
+      "display_name": "Coursera",
+      "category": "education",
+      "is_income": false,
+      "confidence": 0.92
+    },
+    "unacademy": {
+      "display_name": "Unacademy",
+      "category": "education",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "byjus": {
+      "display_name": "Byju's",
+      "category": "education",
+      "is_income": false,
+      "confidence": 0.88
+    },
+    "ybl": {
+      "display_name": "UPI Transfer",
+      "category": "personal_transfer",
+      "is_income": false,
+      "confidence": 0.4
+    },
+    "oksbi": {
+      "display_name": "UPI Transfer",
+      "category": "personal_transfer",
+      "is_income": false,
+      "confidence": 0.4
+    },
+    "okhdfc": {
+      "display_name": "UPI Transfer",
+      "category": "personal_transfer",
+      "is_income": false,
+      "confidence": 0.4
+    },
+    "okaxis": {
+      "display_name": "UPI Transfer",
+      "category": "personal_transfer",
+      "is_income": false,
+      "confidence": 0.4
+    },
+    "okicici": {
+      "display_name": "UPI Transfer",
+      "category": "personal_transfer",
+      "is_income": false,
+      "confidence": 0.4
+    },
+    "apl": {
+      "display_name": "UPI Transfer",
+      "category": "personal_transfer",
+      "is_income": false,
+      "confidence": 0.4
+    },
+    "payzomato": {
+      "display_name": "Zomato Pay (via CRED)",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "setu.simpl": {
+      "display_name": "Simpl",
+      "category": "credit_card",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "airindia.bdpg": {
+      "display_name": "Air India",
+      "category": "travel",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "paytmqr": {
+      "display_name": "Paytm Merchant",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.7
+    },
+    "grofersindia": {
+      "display_name": "Blinkit (Grofers)",
+      "category": "grocery",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "flightsmojoin": {
+      "display_name": "Flight Booking",
+      "category": "travel",
+      "is_income": false,
+      "confidence": 0.8
+    },
+    "khargymkhana": {
+      "display_name": "Khar Gymkhana",
+      "category": "health_fitness",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "getsimpl": {
+      "display_name": "Simpl",
+      "category": "credit_card",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "atm": {
+      "display_name": "ATM Withdrawal",
+      "category": "cash_withdrawal",
+      "is_income": false,
+      "confidence": 0.85
+    }
+  },
+  "merchant_aliases": {
+    "apple": {
+      "display_name": "Apple",
+      "category": "entertainment",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "appleservices": {
+      "display_name": "Apple Services",
+      "category": "entertainment",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "amznlpa": {
+      "display_name": "Amazon",
+      "category": "shopping",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "amazon": {
+      "display_name": "Amazon",
+      "category": "shopping",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "discovery": {
+      "display_name": "Discovery+",
+      "category": "entertainment",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "simpl": {
+      "display_name": "Simpl",
+      "category": "credit_card",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "setu.simpl": {
+      "display_name": "Simpl",
+      "category": "credit_card",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "dlf": {
+      "display_name": "DLF",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.75
+    },
+    "ambience": {
+      "display_name": "Ambience Mall",
+      "category": "shopping",
+      "is_income": false,
+      "confidence": 0.75
+    },
+    "bistro": {
+      "display_name": "Bistro",
+      "category": "food",
+      "is_income": false,
+      "confidence": 0.8
+    },
+    "bundl": {
+      "display_name": "Swiggy",
+      "category": "food",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "eternal": {
+      "display_name": "Zomato",
+      "category": "food",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "zepto": {
+      "display_name": "Zepto",
+      "category": "grocery",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "blinkit": {
+      "display_name": "Blinkit",
+      "category": "grocery",
+      "is_income": false,
+      "confidence": 0.9
+    },
+    "groww": {
+      "display_name": "Groww",
+      "category": "investment",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "indmoney": {
+      "display_name": "IndMoney",
+      "category": "investment",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "zerodha": {
+      "display_name": "Zerodha",
+      "category": "trading_deposit",
+      "is_income": false,
+      "confidence": 0.85
+    },
+    "paytmqr": {
+      "display_name": "PayTM QR",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.7
+    },
+    "qutab": {
+      "display_name": "Qutab Plaza",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.7
+    },
+    "hsquare": {
+      "display_name": "H Square",
+      "category": "bills",
+      "is_income": false,
+      "confidence": 0.7
+    },
+    "rumaani": {
+      "display_name": "Rumaani",
+      "category": "food",
+      "is_income": false,
+      "confidence": 0.7
+    },
+    "laxman": {
+      "display_name": "Laxman Cafe",
+      "category": "food",
+      "is_income": false,
+      "confidence": 0.7
+    },
+    "vinod": {
+      "display_name": "Vinod Mandi",
+      "category": "grocery",
+      "is_income": false,
+      "confidence": 0.7
+    },
+    "idealprepa": {
+      "display_name": "Ideal Prep",
+      "category": "education",
+      "is_income": false,
+      "confidence": 0.7
+    }
+  }
+}
