@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://via.placeholder.com/120x120.png?text=ITC" alt="indian-txn-classifier logo" width="120" height="120" />
+<img src="icon.png" alt="indian-txn-classifier logo" width="120" height="120" />
 
 # indian-txn-classifier
 
