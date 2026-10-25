@@ -1,41 +1,76 @@
-# Indian Transaction Classifier
+<div align="center">
 
-Fine-tuned **Qwen2.5-0.5B** model for classifying Indian bank transactions (UPI, NEFT, IMPS, RTGS) into 30+ categories with merchant identification.
+<img src="https://via.placeholder.com/120x120.png?text=ITC" alt="indian-txn-classifier logo" width="120" height="120" />
 
-## Model on Hugging Face
+# indian-txn-classifier
 
-🤗 [SahilGoel/indian-txn-classifier](https://huggingface.co/SahilGoel/indian-txn-classifier)
+**Fine-tuned Qwen2.5-0.5B for classifying Indian bank transactions.**
 
-The model weights (957MB safetensors), tokenizer, and LoRA adapter are hosted on Hugging Face Hub.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/The-Great-One/indian-txn-classifier)](https://github.com/The-Great-One/indian-txn-classifier/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/The-Great-One/indian-txn-classifier)](https://github.com/The-Great-One/indian-txn-classifier/pulls)
+[![GitHub stars](https://img.shields.io/github/stars/The-Great-One/indian-txn-classifier?style=social)](https://github.com/The-Great-One/indian-txn-classifier/stargazers)
 
-## Categories
+[Report Bug](https://github.com/The-Great-One/indian-txn-classifier/issues/new?template=bug_report.md) · [Request Feature](https://github.com/The-Great-One/indian-txn-classifier/issues/new?template=feature_request.md)
 
-The classifier supports 30+ categories:
+</div>
 
-**Income:** salary, dividend, interest, rental, capital_gains, other_income
+---
 
-**Expenses:** food, grocery, shopping, bills, medical, insurance, tax_payment, credit_card, personal_transfer, investment, trading_deposit, trading_credit, education, travel, entertainment, donation, loan_emi, loan_repayment, cash_withdrawal
+## Table of Contents
 
-**Special:** friends, family, flat_deposit, trading_fees, vehicle_purchase, staff_salary, health_fitness, transfer, unclassified
+- [About](#about)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
 
-## How It Works
+---
 
-1. **Rule engine** (70-80% coverage) — regex patterns for known merchants, UPI handles, and bank reference formats
-2. **Recurring pattern detector** (10% more) — identifies repeating transactions
-3. **Fine-tuned Qwen 0.5B** (remaining) — LLM fallback for uncertain transactions
+## About
 
-## Training Data
+`indian-txn-classifier` is a fine-tuned **Qwen2.5-0.5B** model for classifying
+Indian bank transactions (UPI, NEFT, IMPS, RTGS) into 30+ categories with
+merchant identification. Model weights (957MB safetensors), tokenizer, and LoRA
+adapter are hosted on Hugging Face Hub.
 
-1,700 privacy-sanitized transaction descriptions with category labels. PII (phone numbers, personal UPI handles, reference numbers) has been redacted.
+## Features
 
-## Run on Hugging Face Spaces
+- ✅ 30+ categories (income, expenses, special)
+- ✅ Rule engine (70-80% coverage) + recurring detector + LLM fallback
+- ✅ Privacy-sanitized training data (PII redacted)
+- ✅ Gradio app for Hugging Face Spaces
+- ✅ Supports 14 Indian banks
+- 🚧 Expanded category set
 
-Try the model in your browser without any setup:
+## Getting Started
+
+### Prerequisites
+
+- Python 3.10+
+
+### Installation
+
+```bash
+git clone https://github.com/The-Great-One/indian-txn-classifier.git
+cd indian-txn-classifier
+pip install -r requirements.txt
+```
+
+## Usage
+
+### Run on Hugging Face Spaces
+
+Try the model in your browser:
 [🤗 Spaces Demo](https://huggingface.co/spaces/SahilGoel/indian-txn-classifier-demo)
 
-Paste any UPI/NEFT/IMPS/RTGS transaction description and get the category, company, income flag, and confidence score.
-
-## Usage (Local)
+### Usage (Local)
 
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -54,18 +89,68 @@ result = tokenizer.decode(outputs[0], skip_special_tokens=True)
 print(result)
 ```
 
-## Files
+### Categories
 
-- `app.py` — Gradio app for Hugging Face Spaces (run in browser)
+**Income:** salary, dividend, interest, rental, capital_gains, other_income
+
+**Expenses:** food, grocery, shopping, bills, medical, insurance, tax_payment,
+credit_card, personal_transfer, investment, trading_deposit, trading_credit,
+education, travel, entertainment, donation, loan_emi, loan_repayment,
+cash_withdrawal
+
+**Special:** friends, family, flat_deposit, trading_fees, vehicle_purchase,
+staff_salary, health_fitness, transfer, unclassified
+
+### Supported Banks
+
+ICICI, HDFC, SBI, Axis, Kotak, Yes Bank, Federal Bank, IDFC First, IndusInd,
+Bank of Baroda, Punjab National, Canara, Union Bank, Unity SFB
+
+### Files
+
+- `app.py` — Gradio app for Hugging Face Spaces
 - `requirements.txt` — Python deps for the Space
 - `code/` — Classifier pipeline (bank parser, rule engine, LLM classifier, merchant DB)
 - `model.safetensors` — Fine-tuned model weights (on Hugging Face Hub)
 - `lora-adapter/` — LoRA adapter checkpoints (on Hugging Face Hub)
 
-## Supported Banks
+### Training Data
 
-ICICI, HDFC, SBI, Axis, Kotak, Yes Bank, Federal Bank, IDFC First, IndusInd, Bank of Baroda, Punjab National, Canara, Union Bank, Unity SFB
+1,700 privacy-sanitized transaction descriptions with category labels. PII
+(phone numbers, personal UPI handles, reference numbers) has been redacted.
+
+### How It Works
+
+1. **Rule engine** (70-80% coverage) — regex patterns for known merchants, UPI handles, bank reference formats
+2. **Recurring pattern detector** (10% more) — identifies repeating transactions
+3. **Fine-tuned Qwen 0.5B** (remaining) — LLM fallback for uncertain transactions
+
+## Roadmap
+
+- [x] v0.1 – Model + Gradio Space
+- [ ] v0.2 – Expanded category set
+- [ ] v1.0 – Stable release
+
+See the open issues for the full list of proposed features and known bugs.
+
+## Contributing
+
+Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) and
+follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## License
 
-MIT
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
+
+## Contact
+
+Sahil Goel – [@The-Great-One](https://github.com/The-Great-One) –
+sahilgoel187@gmail.com
+
+Project link: [https://github.com/The-Great-One/indian-txn-classifier](https://github.com/The-Great-One/indian-txn-classifier)
+
+## Acknowledgments
+
+- [Hugging Face](https://huggingface.co)
+- [Img Shields](https://shields.io)
+- [Contributor Covenant](https://www.contributor-covenant.org)
